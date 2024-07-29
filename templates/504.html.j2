@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "head.html" %}
+    <meta name="description" content="Error 504 (Gateway timeout) when trying to fetch content from the IPFS network.">
+    <title>504 Gateway timeout</title>
+    <style>{% include "style.css" %}</style>
+</head>
+<body>
+    {% include 'header.html.j2' %}
+    <main id="main">
+        <header>
+            <strong>504 Gateway timeout</strong>
+        </header>
+        <section class="container">
+            <p>
+                The gateway is taking too long to fetch your content. This could be due to several reasons:
+            <ul>
+                <li>The CID does not exist in the IPFS network</li>
+                <li>The host that contains the CID has gone offline, is on a slow network connection or overloaded</li>
+            </ul>
+            </p>
+            <p>
+                You might try waiting for a while and trying again. To prevent having this problem in the future,
+                why not self-host a node? You will be able to get all the content in the IPFS network straight
+                from its source! For more information see
+                <a
+                    href="https://docs.ipfs.tech/concepts/ipfs-implementations/?utm_source=bifrost&utm_medium=ipfsio&utm_campaign=error_pages">the
+                    implementations page</a>. You
+                might also want to have a look at the
+                <a
+                    href="https://docs.ipfs.tech/install/ipfs-companion/?utm_source=bifrost&utm_medium=ipfsio&utm_campaign=error_pages">IPFS
+                    companion browser extension</a> which
+                will allow your browser to seamlessly fetch content from your local node.
+            </p>
+            {% include "footer.html" %}
+        </section>
+    </main>
+</body>
+
+</html>
