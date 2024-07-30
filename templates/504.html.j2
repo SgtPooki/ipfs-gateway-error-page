@@ -5,6 +5,11 @@
     <meta name="description" content="Error 504 (Gateway timeout) when trying to fetch content from the IPFS network.">
     <title>504 Gateway timeout</title>
     <style>{% include "style.css" %}</style>
+    <script type="module" defer>
+      const cid = '{{ cid }}';
+
+      {% include '504.js' %}
+    </script>
 </head>
 <body>
     {% include 'header.html.j2' %}
@@ -34,6 +39,9 @@
                 will allow your browser to seamlessly fetch content from your local node.
             </p>
             {% include "footer.html" %}
+        </section>
+        <section>
+          <button id="js-user-troubleshoot-btn">Troubleshoot now</button>
         </section>
     </main>
 </body>
